@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kamal El Sayyed — Software Engineer</title>
+<meta name="description" content="Portfolio of Kamal El Sayyed, a software engineer with 7 years of experience across mobile, full-stack, and DevOps engineering." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar" id="navbar">
+  <div class="navbar__inner">
+    <a href="#home" class="navbar__brand" data-nav-link>Kamal<span class="navbar__brand-dot">.</span></a>
+
+    <nav class="navbar__nav" id="primary-nav" aria-label="Primary">
+      <ul class="navbar__links">
+        <li><a href="#home" data-nav-link data-section="home">Home</a></li>
+        <li><a href="#about" data-nav-link data-section="about">About</a></li>
+        <li><a href="#experience" data-nav-link data-section="experience">Experience</a></li>
+        <li><a href="#projects" data-nav-link data-section="projects">Projects</a></li>
+        <li><a href="#skills" data-nav-link data-section="skills">Skills</a></li>
+        <li><a href="#education" data-nav-link data-section="education">Education</a></li>
+        <li><a href="#contact" data-nav-link data-section="contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="navbar__actions">
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle color theme" aria-pressed="false">
+        <svg class="theme-toggle__icon theme-toggle__icon--sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+        <svg class="theme-toggle__icon theme-toggle__icon--moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path></svg>
+      </button>
+
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile menu (sibling of header, not a flex child of .navbar) -->
+<div class="mobile-menu" id="mobile-menu">
+  <ul class="mobile-menu__links">
+    <li><a href="#home" data-nav-link data-section="home">Home</a></li>
+    <li><a href="#about" data-nav-link data-section="about">About</a></li>
+    <li><a href="#experience" data-nav-link data-section="experience">Experience</a></li>
+    <li><a href="#projects" data-nav-link data-section="projects">Projects</a></li>
+    <li><a href="#skills" data-nav-link data-section="skills">Skills</a></li>
+    <li><a href="#education" data-nav-link data-section="education">Education</a></li>
+    <li><a href="#contact" data-nav-link data-section="contact">Contact</a></li>
+  </ul>
+</div>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="hero__inner container">
+      <div class="hero__content">
+        <p class="hero__eyebrow" id="hero-current">Software Engineer</p>
+        <h1 class="hero__name" id="hero-name">—</h1>
+        <p class="hero__title" id="hero-title">—</p>
+        <p class="hero__specialty" id="hero-specialty" aria-live="polite"></p>
+        <p class="hero__intro" id="hero-intro"></p>
+
+        <div class="hero__cta">
+          <a href="#projects" class="btn btn--primary" data-nav-link>View My Work</a>
+          <a href="#" class="btn btn--secondary" id="hero-cv-download" download>Download CV</a>
+        </div>
+      </div>
+
+      <div class="hero__portrait">
+        <div class="hero__portrait-frame" id="hero-portrait-frame">
+          <img id="hero-photo" alt="Portrait of Kamal El Sayyed" />
+          <div class="hero__portrait-fallback" id="hero-portrait-fallback" aria-hidden="true">Kamal</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section__title">About Me</h2>
+
+      <div class="about">
+        <div class="about__text" id="about-text"></div>
+
+        <div class="about__stats" id="about-stats"></div>
+      </div>
+
+      <div class="what-i-do" id="what-i-do"></div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section class="section section--alt" id="experience">
+    <div class="container">
+      <h2 class="section__title">Experience</h2>
+      <ol class="timeline" id="timeline"></ol>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="section" id="projects">
+    <div class="container">
+      <h2 class="section__title">Projects</h2>
+
+      <div class="project-filters" id="project-filters" role="tablist" aria-label="Filter projects by category"></div>
+
+      <div class="project-grid" id="project-grid"></div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="section section--alt" id="skills">
+    <div class="container">
+      <h2 class="section__title">Skills</h2>
+      <div class="skills-grid" id="skills-grid"></div>
+    </div>
+  </section>
+
+  <!-- ============ EDUCATION ============ -->
+  <section class="section" id="education">
+    <div class="container">
+      <h2 class="section__title">Education</h2>
+      <div class="education-list" id="education-list"></div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section section--alt" id="contact">
+    <div class="container">
+      <h2 class="section__title" id="contact-heading">Let's Talk</h2>
+      <p class="contact__message" id="contact-message"></p>
+
+      <div class="contact__grid" id="contact-grid"></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <p id="footer-name"></p>
+  </div>
+</footer>
+
+<!-- ============ PROJECT DETAIL MODAL ============ -->
+<div class="project-modal" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+  <div class="project-modal__backdrop" id="project-modal-backdrop"></div>
+  <div class="project-modal__panel" role="document">
+    <button class="project-modal__close" id="project-modal-close" type="button" aria-label="Close project details">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"></path></svg>
+    </button>
+    <div class="project-modal__content" id="project-modal-content"></div>
+  </div>
+</div>
+
+<!-- ============ SCREENSHOT LIGHTBOX ============ -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Screenshot viewer" hidden>
+  <div class="lightbox__backdrop" id="lightbox-backdrop"></div>
+  <figure class="lightbox__figure">
+    <button class="lightbox__close" id="lightbox-close" type="button" aria-label="Close image viewer">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"></path></svg>
+    </button>
+    <img id="lightbox-image" src="" alt="">
+    <figcaption id="lightbox-caption"></figcaption>
+  </figure>
+</div>
+
+<script src="js/portfolio-data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
